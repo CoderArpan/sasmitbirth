@@ -1,0 +1,29 @@
+/* Optional: Add some styles for the modal */
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+    max-width: 800px;
+    max-height: 90vh;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ReactModal__Content img {
+    width: 100%;
+    height: auto;
+}
+
+.ReactModal__Content button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
