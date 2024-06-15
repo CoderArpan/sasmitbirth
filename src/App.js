@@ -7,6 +7,7 @@ import Video from './components/Video';
 import Footer from './components/Footer';
 import Spinner from './components/Spinner';
 import CurtainAnimation from './components/CurtainAnimation';
+import FunkyParagraph from './components/FunkyParagraph';
 import './App.css';
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
     };
 
     if (loading) {
-        return <Spinner message="Ruk ja bkl itna kiya jaldi jhai Ruk!!" />;
+        return <Spinner message="Please wait, we are preparing a special birthday surprise!" />;
     }
 
     return (
@@ -39,6 +40,7 @@ const App = () => {
             <Timeline />
             {animationComplete && (
                 <>
+                    <FunkyParagraph />
                     <Video />
                     <Footer />
                 </>

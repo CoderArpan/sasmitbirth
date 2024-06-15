@@ -1,0 +1,33 @@
+.funky-paragraph-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border: 5px dashed #ff4500;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.funky-paragraph {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.5em;
+    color: #ff1493;
+    margin: 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: funkyTextAnimation 2s infinite;
+    display: inline-block;
+    text-shadow: 2px 2px #ffa500;
+}
+
+@keyframes funkyTextAnimation {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
