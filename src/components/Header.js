@@ -1,11 +1,12 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
     return (
-        <header style={{ textAlign: 'center', padding: '50px', background: '#f4f4f4' }}>
-            <h1>Happy Birthday, [Bantu!! Sasmit]!</h1>
+        <header className="header">
+            <h1 className="hand-cursor">Happy Birthday!</h1>
         </header>
     );
-};
+}
 
 export default Header;

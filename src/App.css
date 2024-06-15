@@ -3,7 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background: #f9f9f9;
+  cursor: url('./components/cake-cursor.png'), auto;
 }
+
 
 header {
   background: #f4f4f4;

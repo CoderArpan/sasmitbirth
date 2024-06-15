@@ -8,7 +8,8 @@ import Footer from './components/Footer';
 import Spinner from './components/Spinner';
 import CurtainAnimation from './components/CurtainAnimation';
 import FunkyParagraph from './components/FunkyParagraph';
-import './App.css';
+import './App.css'; // Ensure this is included
+import './index.css'; // Ensure this is included if you added the CSS there
 
 const App = () => {
     const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ const App = () => {
     };
 
     if (loading) {
-        return <Spinner message="Please wait, we are preparing a special birthday surprise!" />;
+        return <Spinner message="Ruk ja bkl itna v kiya jaldi hai!" />;
     }
 
     return (
