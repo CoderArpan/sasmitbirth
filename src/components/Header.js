@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="header">
-            <h1 className="hand-cursor">Happy Birthday!</h1>
+            <h1 className="hand-cursor">Happy Birthday! Bnatu</h1>
         </header>
     );
 }
