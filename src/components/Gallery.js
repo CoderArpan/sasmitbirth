@@ -32,15 +32,17 @@ const Gallery = () => {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div className="gallery-container">
             {photos.map((photo, index) => (
-                <img 
-                    key={index} 
-                    src={photo} 
-                    alt={`Memory ${index + 1}`} 
-                    style={{ margin: '10px', width: '200px', height: '200px', objectFit: 'cover', cursor: 'pointer' }} 
-                    onClick={() => openModal(photo)}
-                />
+                <div key={index} className="gallery-item">
+                    <img 
+                        src={photo} 
+                        alt={`Memory ${index + 1}`} 
+                        className="gallery-image" 
+                        onClick={() => openModal(photo)}
+                    />
+                    <div className="balloons">🎈🎈🎈</div>
+                </div>
             ))}
             <Modal 
                 isOpen={modalIsOpen} 
@@ -48,16 +50,20 @@ const Gallery = () => {
                 style={{
                     content: {
                         display: 'flex',
+                        flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
                         padding: '20px',
                         overflow: 'auto',
+                        backgroundColor: '#fff0f5', // Light pink background for a birthday feel
+                        borderRadius: '10px',
+                        border: '2px solid #ff69b4', // Hot pink border
                     }
                 }}
             >
                 <div>
-                    {currentImage && <img src={currentImage} alt="Current" style={{ width: '100%', height: 'auto' }} />}
-                    <button onClick={closeModal} style={{ display: 'block', margin: '20px auto', padding: '10px 20px', fontSize: '16px' }}>Close</button>
+                    {currentImage && <img src={currentImage} alt="Current" className="modal-image" />}
+                    <button onClick={closeModal} className="close-button">Close</button>
                 </div>
             </Modal>
         </div>

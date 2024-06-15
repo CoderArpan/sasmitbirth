@@ -1,22 +1,23 @@
 import React from 'react';
+import './Messages.css';
+
+const messages = [
+    "Happy Birthday! 🎉🎂",
+    "Wishing you a fantastic day! 🎈✨",
+    "Here's to another amazing year! 🥳🍰",
+    "May all your dreams come true! 🌟🎁",
+];
 
 const Messages = () => {
-    const messages = [
-        "Happy Birthday! Have a fantastic day!",
-        "Wishing you all the best on your special day!",
-        "Hope your birthday is as amazing as you are!"
-    ];
-
     return (
-        <div style={{ padding: '20px' }}>
-            <h2>Messages</h2>
-            <ul>
-                {messages.map((message, index) => (
-                    <li key={index}>{message}</li>
-                ))}
-            </ul>
+        <div className="messages-container">
+            {messages.map((message, index) => (
+                <div key={index} className="message-item">
+                    {message}
+                </div>
+            ))}
         </div>
     );
-};
+}
 
 export default Messages;

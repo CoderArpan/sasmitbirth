@@ -1,0 +1,48 @@
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border: 5px dashed #ff69b4;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.message-item {
+    background: #ffffff;
+    color: #ff69b4;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.5em;
+    padding: 15px 25px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.message-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    background: #ffebf0;
+}
+
+.message-item:after {
+    content: ' 🎉';
+    font-size: 1.2em;
+    display: inline-block;
+    animation: confetti 1s infinite;
+}
+
+@keyframes confetti {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}

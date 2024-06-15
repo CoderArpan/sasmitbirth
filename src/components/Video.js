@@ -1,34 +1,21 @@
 import React from 'react';
+import './Video.css';
 
 const Video = () => {
-    const videos = [
-        {
-            url: 'https://www.example.com/video1.mp4', // Replace with your video URL
-            title: 'Birthday Celebration 2022'
-        },
-        {
-            url: 'https://www.example.com/video2.mp4', // Replace with your video URL
-            title: 'Our Trip to the Mountains'
-        },
-        {
-            url: 'https://www.example.com/video3.mp4', // Replace with your video URL
-            title: 'Surprise Party'
-        }
-    ];
-
     return (
-        <div style={{ padding: '20px' }}>
-            <h2>Videos</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                {videos.map((video, index) => (
-                    <div key={index} style={{ margin: '10px', textAlign: 'center' }}>
-                        <video width="320" height="240" controls>
-                            <source src={video.url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>{video.title}</p>
-                    </div>
-                ))}
+        <div className="video-container">
+            <h2 className="video-title">Special Birthday Video</h2>
+            <div className="video-wrapper">
+                <iframe
+                    className="video-frame"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Birthday Video"
+                ></iframe>
             </div>
         </div>
     );
