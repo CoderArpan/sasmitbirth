@@ -27,7 +27,7 @@ const App = () => {
     };
 
     if (loading) {
-        return <Spinner message="Please wait, we are preparing a special birthday surprise!" />;
+        return <Spinner message="Ruk ja bkl itna kiya jaldi jhai Ruk!!" />;
     }
 
     return (
